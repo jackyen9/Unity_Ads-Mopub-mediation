@@ -1,0 +1,19 @@
+{
+  "buildFiles": [
+    "/Users/jason/Library/Android/sdk/ndk-bundle/build/cmake/platforms.cmake",
+    "/Users/jason/Documents/AndroidStudioProjects/MyApplication_Unity/app/CMakeLists.txt",
+    "/Users/jason/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/jason/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/jason/Documents/AndroidStudioProjects/MyApplication_Unity/app/.cxx/cmake/release/x86_64\" clean"
+  ],
+  "buildTargetsCommand": "/Users/jason/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/jason/Documents/AndroidStudioProjects/MyApplication_Unity/app/.cxx/cmake/release/x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-Release-x86_64": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/jason/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/jason/Documents/AndroidStudioProjects/MyApplication_Unity/app/.cxx/cmake/release/x86_64\" native-lib",
+      "abi": "x86_64",
+      "output": "/Users/jason/Documents/AndroidStudioProjects/MyApplication_Unity/app/build/intermediates/cmake/release/obj/x86_64/libnative-lib.so"
+    }
+  }
+}

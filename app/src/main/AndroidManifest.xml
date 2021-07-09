@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.jacky.myapplication1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        tools:replace="android:fullBackupContent"
+        android:fullBackupContent="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:name=".AFApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true">
+
+        <!--<meta-data android:name="CHANNEL" android:value="TEST"/>
+        android:requestLegacyExternalStorage="true"
+        -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+           <intent-filter android:autoVerify="true">
+               <action  android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+<!--    <service
+            android:name="com.appsflyer.FirebaseInstanceIdListener">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+     </service>
+             android:fullBackupContent="true"
+        tools:replace="android:fullBackupContent"
+        tools:replace="android:appComponentFactory"
+        tools:replace="android:fullBackupContent"
+     -->
+
+    <!-- <service
+            android:name="com.appsflyer.FirebaseMessagingServiceListener">ADB
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>-->
+
+      <!--  <receiver
+            android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>-->
+        <!-- MoPub's consent dialog -->
+        <activity android:name="com.mopub.common.privacy.ConsentDialogActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+
+        <!-- All ad formats -->
+        <activity android:name="com.mopub.common.MoPubBrowser" android:configChanges="keyboardHidden|orientation|screenSize"/>
+
+        <!-- Interstitials -->
+        <activity android:name="com.mopub.mobileads.MoPubActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.mobileads.MraidActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+
+        <!-- Rewarded Ad and Rewarded Playables -->
+        <activity android:name="com.mopub.mobileads.RewardedMraidActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.mobileads.MraidVideoPlayerActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".AppsFlyerTest">
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https"
+                    android:host="jasonlin3.onelink.me"
+                    android:pathPrefix="/KmFW" />
+
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="jason-lin"
+                    android:host="com.reddoorz.app" />
+            </intent-filter>
+            <intent-filter  android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https"
+                    android:host="jasonlin2.onelink.me"
+                    android:pathPrefix="/7PeB" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".NewPageTest" >
+            <intent-filter  android:autoVerify="true">
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="jasonlin" />
+                <!--<data android:scheme="https"
+                    android:host="jasonlin2.onelink.me"
+                    android:pathPrefix="/7PeB" />-->
+            </intent-filter>
+
+
+            <!--
+             <intent-filter  android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="axrock.app.link" />
+                <data android:scheme="https" android:host="axrock-alternate.app.link" />
+                <data android:scheme="https" android:host="axrock.test-app.link" />
+                <data android:scheme="https" android:host="axrock-alternate.test-app.link" />
+            </intent-filter>
+                <data android:scheme="https"
+                        android:host="jasonlin3.onelink.me"
+                        android:pathPrefix="/KmFW" />
+                <intent-filter  android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https"
+                    android:host="jasonlin.onelink.me"
+                    android:pathPrefix="/tNkL" />
+            </intent-filter>
+
+        <intent-filter  android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https"
+                  android:host="adayroi.onelink.me"
+                  android:pathPrefix="**ONELINKID**" />
+            <data android:scheme="https"
+                  android:host="www.adayroi.com"/>
+
+        </intent-filter>
+            -->
+        </activity>
+
+        <activity android:name=".SecondActivity"/>
+
+        <!--<meta-data android:name="AF_PRE_INSTALL_NAME" android:value="null"/>-->
+        <!--<meta-data android:name="AF_PRE_INSTALL_NAME" android:value="oppo_int"/>-->
+
+        <!--<service android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> -->
+        <!--  <meta-data android:name="CHANNEL" android:value="oppo_int" />
+
+
+         <meta-data android:name="CHANNEL" android:value="happyfresh" />
+        <meta-data android:name="AF_PRE_INSTALL_NAME" android:value="oppo_int"/>-->
+     </application>
+
+ </manifest>
